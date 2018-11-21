@@ -30,4 +30,14 @@
 
 `# curl -s -f -k -H "Authorization: Bearer token" -H 'Content-Type: application/json' -XPOST -d '{"name": "Org Name", "description": "Created using API"}' https://tower_server/api/v2/organizations/`
 
+- Request to create a normal user:
 
+`# curl -s -f -k -H "Authorization: Bearer token" -H 'Content-Type: application/json' -XPOST -d '{"username": "name", "first_name": "a", "last_name": "z", "is_superuser": false, "password": "$password", "email": "az@az.com"}' https://tower_server/api/v2/users/`
+
+- Request to create a ad hoc command:
+
+`# curl -s -f -k -H "Authorization: Bearer token" -H 'Content-Type: application/json' -XPOST -d '{"module_name": "dnf", "module_args": "name=htop state=latest", "inventory": 4, "credential": 1}' https://tower_server/api/v2/ad_hoc_commands/`
+
+- Request to see standard output of a job:
+
+`# curl --request GET   --url https://tower_server/api/v2/jobs/JOB_ID/stdout/?format=txt  --user username:password   --header 'content-type: text/plain' --insecure`
