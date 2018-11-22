@@ -6,11 +6,11 @@
 
 `# curl -k https://tower_server/api/v2/ping/`
 
-*--Store Tower Credential in a specific path--*
+### *Store Tower Credential in a specific path*
 
-`# cat credential_path.json
+`# cat credential_path.json`
 
-{ 
+`{ 
 "username": "admin",
 "password": "password" 
 }`
