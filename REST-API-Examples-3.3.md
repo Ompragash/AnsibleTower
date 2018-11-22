@@ -1,5 +1,7 @@
 ### Version: Ansible Tower >= 3.3.x 
 
+For examples on Ansible Tower 3.2.x check this [link](https://github.com/Ompragash/AnsibleTower/blob/master/REST-API-EXAMPLES-3.2.md).
+
 ## REST API examples using curl:
 
 - Request to see ping endpoint details:
