@@ -3,6 +3,6 @@
   become: True
   tasks:
   - copy:
-      content: "{{ inventory_hostname }}" is managed by Ansible.
+      content: "{{ inventory_hostname }} is managed by Ansible."
       dest: /etc/motd
 
