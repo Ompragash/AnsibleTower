@@ -2,6 +2,7 @@
 - hosts: all
   gather_facts: False
   become: True
+  become_method: su
   tasks:
   - copy:
       content: "{{ inventory_hostname }} is managed by Ansible."
