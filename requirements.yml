@@ -1,0 +1,12 @@
+---
+- src: https://github.com/geerlingguy/ansible-role-nfs
+  version: master
+  name: nfs1
+
+- src: https://github.com/geerlingguy/ansible-role-nfs
+  version: master
+  name: nfs2
+
+- src: https://github.com/geerlingguy/ansible-role-nfs
+  version: master
+  name: nfs3
