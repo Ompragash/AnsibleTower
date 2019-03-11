@@ -3,3 +3,5 @@
   gather_facts: True
   tasks:
   - ping:
+  - pause:
+      minutes: 1
