@@ -18,6 +18,6 @@
 9.9.9.9
 0.0.0.0
 
-[all:vars]
+[ansi:vars]
 ansible_user=ansible
 become=true
