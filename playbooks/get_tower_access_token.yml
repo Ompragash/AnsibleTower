@@ -1,0 +1,22 @@
+---
+- name: Get Tower Access Token
+  hosts: localhost
+  vars:
+    tower_host: https://X.X.X.X
+    tower_user: admin
+    tower_passwd: passwd
+  tasks:
+  - name: Request to get Access Token
+    uri:
+      url: "{{ tower_host }}/api/v2/tokens/"
+      method: POST
+      user: "{{ tower_user }}"
+      password: "{{ tower_passwd }}"
+      force_basic_auth: yes
+      validate_certs: no
+      status_code: 201
+    register: output
+
+  - name: Print Access Token
+    debug:
+      var: output.json.token
