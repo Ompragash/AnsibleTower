@@ -1,5 +1,5 @@
 ---
-- hosts:
+- hosts: 13.211.65.28
   connection: local
   tasks:
   - command: /bin/python scripts/hello_world.py
