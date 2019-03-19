@@ -4,5 +4,5 @@
   vars_files:
     - vars/vars.yml
   tasks:
-  - command: "{{ python_path }}" "{{ file_path }}" 
+  - command: "{{ python_path }} {{ file_path }}" 
     delegate_to: 13.211.124.110
