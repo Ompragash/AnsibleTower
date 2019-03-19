@@ -1,6 +1,8 @@
 ---
 - hosts: 13.211.65.28
   connection: local
+  vars_files:
+    - vars/vars.yml
   tasks:
-  - command: /bin/python /tmp/hello.py
+  - command: "{{ python_path }}" "{{ file_path }}" 
     delegate_to: 13.211.124.110
