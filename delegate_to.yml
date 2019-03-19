@@ -1,6 +1,6 @@
 ---
 - hosts: 13.211.65.28
-  #connection: local
+  connection: local
   tasks:
   - command: /bin/python scripts/hello_world.py
     delegate_to: 13.211.124.110
