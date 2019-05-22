@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+  - set_stats:
+      data:
+        hostname: "13.211.65.28"
