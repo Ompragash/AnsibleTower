@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: True
+  become_method: su
+  gather_facts: False
+  tasks:
+  - name: Configure motd file 1
+    copy:
+      content: "Container {{inventory_hostname}} is managed by Ansible."
+      dest: /etc/motd
+  
+  - ping:
+
+  - ping:
+
+  - ping:
+
+  - ping:
