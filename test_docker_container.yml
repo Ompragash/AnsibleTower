@@ -2,7 +2,7 @@
 - hosts: all
   become: True
   become_method: su
-  gather_facts: False
+  gather_facts: True 
   tasks:
   - name: Configure motd file 1
     copy:
