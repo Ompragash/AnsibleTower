@@ -1,10 +1,10 @@
 ---
-- hosts: all
+- hosts: localhost
   connection: local
-  vars:
-    - foo: bar
   tasks:
-  - name: write foo to disk
-    copy:
-      content: "{{ foo | to_nice_json }}"
+  - set_fact:
+      foo: bar
+
+  - template:
+      src: template.j2
       dest: /tmp/bar.json
