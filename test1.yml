@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: local
+  vars:
+    - foo: bar
+  tasks:
+  - name: write foo to disk
+    copy:
+      content: "{{ foo | to_nice_json }}"
+      dest: /tmp/bar.json
