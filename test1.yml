@@ -1,10 +1,24 @@
 ---
-- hosts: localhost
-  connection: local
+- name: Provision a new instance in ec2
+  hosts: all
   tasks:
-  - set_fact:
-      foo: bar
+  - ec2:
+      key_name: omi
+      group_id:
+      instance_type: t2.micro
+      image: ami-67589505
+      vpc_subnet_id: subnet-497d9a2c
+      region: ap-southeast-2b
+      instance_tags:
+        Name: "{{ ec2_name }}"
+      assign_public_ip: yes
+      wait: true
+      count: 1
+      volumes:
+        - device_name: /dev/sda1
+          device_type: gp2
+          volume_size: 10
+          delete_on_termination: true
+    register: ec2
 
-  - template:
-      src: template.j2
-      dest: bar.json
+  - debug: var=ec2.instances
