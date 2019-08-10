@@ -8,7 +8,7 @@
       instance_type: t2.micro
       image: ami-67589505
       vpc_subnet_id: subnet-497d9a2c
-      region: ap-southeast-2b
+      region: ap-southeast-2
       instance_tags:
         Name: "{{ ec2_name }}"
       assign_public_ip: yes
