@@ -1,0 +1,8 @@
+---
+- hosts: all
+  vars:
+    - omy: "The Ansibler"
+  tasks:
+  - set_stats:
+      data:
+        bar: "{{ omy }}"
