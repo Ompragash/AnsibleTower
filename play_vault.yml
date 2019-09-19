@@ -6,3 +6,4 @@
 
   - debug:
       msg: "{{ foo }}"
+    no_log: True
