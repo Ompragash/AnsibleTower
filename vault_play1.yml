@@ -1,0 +1,9 @@
+---
+- hosts: all #localhost 
+  #connection: local
+  vars_files:
+    - vault.yml
+  tasks:
+  - debug:
+      msg: "{{ foo }}"
+  
