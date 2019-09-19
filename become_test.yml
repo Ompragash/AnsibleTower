@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: Cat something
+    command: cat /etc/motd
+    delegate_to: localhost
+    run_once: true
+    become: false
+...

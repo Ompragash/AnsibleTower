@@ -1,0 +1,8 @@
+---
+- name: Example Synchronize Module
+  hosts: all
+  tasks:
+  - synchronize:
+      mode: push
+      src: sample.txt
+      dest: "/tmp"
