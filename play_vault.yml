@@ -1,6 +1,6 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: all 
+  #connection: local
   tasks:
   - include_vars: vault.yml
 
