@@ -21,6 +21,7 @@
 [my]
 11.11.11.11
 22.22.22.22
+33.33.33.33
 
 [test:vars]
 ansible_user=ansible
