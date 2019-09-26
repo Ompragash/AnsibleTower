@@ -18,6 +18,10 @@
 9.9.9.9
 0.0.0.0
 
+[my]
+11.11.11.11
+22.22.22.22
+
 [test:vars]
 ansible_user=ansible
 become=true
