@@ -1,0 +1,27 @@
+- name: test
+  hosts: all
+  gather_facts: false
+  vars:
+    M3: BLAH
+    M3LC: blah
+    M2: MUH
+    G3: MEH
+    M: MUXL
+    G3LC: meh
+    EN2: ENZWEI
+    EN: EHEN
+    DATACENTER: DAHAM
+    ctmbo_user: a4227
+    ctmbo_tempdir: /tmp
+    ctmbo_folder: TEST
+    STAGELC: test
+    ctmbo_folder_template: CTM_BO_TEST_WORKFLOW
+
+  tasks:
+
+    - name: "CTMBO Set variable fields within exported template folder xml"
+      template:
+        src: "{{ ctmbo_folder_template }}.xml"
+        dest: "{{ ctmbo_tempdir }}/{{ ctmbo_folder }}.xml"
+        variable_start_string: "-."
+        variable_end_string: ".-"
