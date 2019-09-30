@@ -16,8 +16,15 @@
     ctmbo_folder: TEST
     STAGELC: test
     ctmbo_folder_template: CTM_BO_TEST_WORKFLOW
+    foo: bar
 
   tasks:
+
+    - template:
+        src:  ctmbo.xml
+        dest: /tmp/ct.xml
+        variable_start_string: "-."
+        variable_end_string: ".-"
 
     - name: "CTMBO Set variable fields within exported template folder xml"
       template:
