@@ -30,5 +30,5 @@
       template:
         src: "{{ ctmbo_folder_template }}.xml"
         dest: "{{ ctmbo_tempdir }}/{{ ctmbo_folder }}.xml"
-        #variable_start_string: "-."
-        #variable_end_string: ".-"
+        variable_start_string: "-."
+        variable_end_string: ".-"
