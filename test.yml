@@ -20,12 +20,6 @@
 
   tasks:
 
-    - template:
-        src:  ctmbo.xml
-        dest: /tmp/ct.xml
-        variable_start_string: "-."
-        variable_end_string: ".-"
-
     - name: "CTMBO Set variable fields within exported template folder xml"
       template:
         src: "{{ ctmbo_folder_template }}.xml"
