@@ -1,5 +1,6 @@
 - hosts: localhost
   connection: local
   tasks:
+  - setup:
   - ec2_ami_facts:
       image_ids: ami-068f4807abc434f1a
