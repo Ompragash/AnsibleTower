@@ -1,0 +1,17 @@
+- hosts: all
+  gather_facts: False
+  connection: local
+
+  tasks:
+  - yum:
+     name: firewalld
+     state: present
+
+  - service:
+      name: firewalld
+      state: started
+
+  - firewalld:
+      service: ssh
+      permanent: yes
+      state: enabled
