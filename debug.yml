@@ -2,7 +2,7 @@
 - hosts: "{{ host }}"
   tasks:
   - debug:
-      var: "{{ var1 }}"
+      var: var1
 
   - debug:
-      var: "{{ var2 }}"
+      var: var2
