@@ -1,6 +1,7 @@
 [dev]
 1.1.1.1
 2.2.2.2
+host1 ansible_connection=local ansible_host=localhost
 
 [prod]
 3.3.3.3
