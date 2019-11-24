@@ -1,5 +1,8 @@
 ---
-- hosts: all
+- hosts: "{{ host }}"
   tasks:
   - debug:
-      msg: "{{ foo }}"
+      var: "{{ var1 }}"
+
+  - debug:
+      var: "{{ var2 }}"
