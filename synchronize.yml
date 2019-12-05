@@ -2,7 +2,9 @@
 - name: Example Synchronize Module
   hosts: all
   tasks:
-  - synchronize:
-      mode: push
-      src: sample.txt
-      dest: "/tmp"
+  - name: Syncing /home/demo/.config directory ...
+    synchronize:
+     src: ./sample.txt
+     dest: /home/ec2-user/
+     delete: yes
+     recursive: yes
